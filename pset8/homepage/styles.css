@@ -1,0 +1,82 @@
+.title
+{
+    color: purple;
+    text-align: center;
+    font-family: sans-serif;
+}
+.center
+{
+    color: black;
+    text-align: center;
+}
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td
+{
+    text-align: left;
+    padding: 6px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th
+{
+    background-color: #800080;
+    color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: black;
+}
+
+a:hover{
+    color: purple;
+}
+
+
+.content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+.sans-serif
+{
+  font-family: sans-serif;
+}
+.content1 {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+  color: #2F363F; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}

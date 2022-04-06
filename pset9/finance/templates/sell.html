@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form   action="/sell" onsubmit="menu();" method="post">
+        <div class="select" autofocus class="form-control" style="width:200px;">
+          <select name="selected" >
+            <option>Symbol</option>
+            {% for row in rows %}
+                <option> {{row["stockSymbol"]}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number" onkeypress="return event.charCode >= 48" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bought
+{% endblock %}
+
+{% block main %}
+    <div class="alert alert-primary" role="alert">
+      Bought!
+    </div>
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        {% for row in rows %}
+            <tr>
+                <td>
+                    {{row["Symbol"]}}
+                </td>
+                <td>
+                    {{row["Name"]}}
+                </td>
+                <td>
+                    {{row["Shares"]}}
+                </td>
+                <td>
+                    {{row["Price"]}}
+                </td>
+                <td>
+                    {{row["Total"]}}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

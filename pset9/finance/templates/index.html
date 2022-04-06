@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>TOTAL</th>
+        </tr>
+        {% for row in rows %}
+            <tr>
+                <td>
+                    {{row["Symbol"]}}
+                </td>
+                <td>
+                    {{row["Name"]}}
+                </td>
+                <td>
+                    {{row["Shares"]}}
+                </td>
+                <td>
+                    ${{row["Price"]}}
+                </td>
+                <td>
+                    ${{row["Total"]}}
+                </td>
+            </tr>
+        {% endfor %}
+
+        <tr>
+            <td>
+                CASH
+            </td>
+            {% for i in range(3) %}
+                <td>
+
+                </td>
+            {% endfor %}
+            <td> ${{cash}}</td>
+        </tr>
+        <tr>
+            {% for i in range(4) %}
+                <td>
+
+                </td>
+            {% endfor %}
+            <td style="font-weight: bold;">
+                ${{total}}
+            </td>
+        </tr>
+
+
+    </table>
+{% endblock %}

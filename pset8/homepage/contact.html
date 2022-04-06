@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Healthy Cafe</title>
+        <script>
+            function greet()
+            {
+                let name = document.querySelector('#name').value;
+                let people = document.querySelector('#people').value;
+                let email = document.querySelector('#email').value;
+                let premium = document.querySelector('#premium').value;
+                let event = document.querySelector('#event').value;
+                if ((name === '') || (people === '') || (email === '') || (premium === '') || (event === ''))
+                {
+                    name = 'world! please enter all the requirements.';
+                    alert('Hello, ' + name);
+
+                }
+                else
+                {
+                    alert('Hello, ' + name + '! Thank you for choosing us! We will respond you to your request as soon as possible.');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+        <h2 class="title">Contact Us</h2>
+        <h5 class="center sans-serif">In your momentfull events, we will be very happy to cater you the finest food-service to satisfy all your needs. Feel free to Specify any special requirements. We offer full-service catering 24/7.</h5>
+        <br>
+        <h5 class="center sans-serif">Contact Us by phone 1531784679-4697 or email myhealthycafe@catering.com, or you can send us message here:</h5>
+        <br>
+        <br>
+
+        <form onsubmit="greet(); return false;" class="center">
+        <input type="text" id="name" placeholder="Name" style="font-size: 15px;" ><br><br>
+        <input type="email" id="email" placeholder="Email" style="font-size: 15px;" ><br><br>
+        <input type="text" id="people" placeholder="How many person" style="font-size: 15px;" ><br><br>
+        <input type="date,time" id="event" placeholder="dd/mm/yyyy,00:00am/pm" style="font-size: 15px;" ><br><br>
+        <input type="text" id="premium" placeholder="Special Requirements" style="font-size: 15px;" ><br><br>
+        <input type="submit" style="color:purple; font-size: large;" style="font-size: 15px;" >
+        </form>
+
+        <div class="content1" style="color: white; background-color : black;">
+            <h3>Visit Us.</h3>
+            <p>ST, Lawrence Street. <br> Near steven's mall, Catherine highway, <br> New York. <br> ph - 465-9652</p>
+        </div>
+    </body>
+</html>
